@@ -2,13 +2,16 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.common.exceptions import NoSuchElementException
 import time
-
+#your email
 ACCOUNT_EMAIL = YOUR LOGIN EMAIL
+#your password
 ACCOUNT_PASSWORD = YOUR LOGIN PASSWORD
+#enter your number
 PHONE = YOUR PHONE NUMBER
-
+#place your chrome driver path C:\Program Files\(select the folder you want to put your file)\chromedriver.exe
 chrome_driver_path = YOUR CHROME DRIVER PATH
 driver = webdriver.Chrome(chrome_driver_path)
+#go to linkdin and search for the area and job description you want copy link place below 
 driver.get("https://www.linkedin.com/jobs/search/?f_LF=f_AL&geoId=101891230&keywords=web%20developer&location=Tulsa%2C%20Oklahoma%2C%20United%20States")
 
 time.sleep(2)
@@ -59,7 +62,7 @@ for listing in all_listings:
     except NoSuchElementException:
         print("No application button, skipped.")
         continue
-
+#should work when all info indicated is placed in
 time.sleep(5)
 driver.quit()
 
